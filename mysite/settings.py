@@ -1,4 +1,6 @@
 # Django settings for mysite project.
+from registration_defaults.settings import *
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -107,13 +109,16 @@ ROOT_URLCONF = 'mysite.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-TEMPLATE_DIRS = ('/home/cvarog/workspace/django_project/mysite/templates',
+TEMPLATE_DIRS = ('/home/cvarog/workspace/django_projects/django_first_app/mysite/templates',
+                  '/home/cvarog/workspace/django_projects/django_first_app/mysite/templates/registration',   
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
 
 INSTALLED_APPS = (
+
+    # 'registration_defaults',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -125,7 +130,20 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'polls',
+    'registration',
 )
+
+ACCOUNT_ACTIVATION_DAYS = 7
+# EMAIL_HOST = 'localhost'
+# DEFAULT_FROM_EMAIL = 'uchihamilord@gmail.com'
+# LOGIN_REDIRECT_URL = '/'
+DEFAULT_FROM_EMAIL = 'Alvyre@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'Alvyre@gmail.com'
+EMAIL_HOST_PASSWORD = 'I3s2v1i6r5anna'
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
