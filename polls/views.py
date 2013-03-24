@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, HttpResponse
 
 from polls.models import Poll
 
+# from django.contrib.auth import User
+
 # def index(request):
 #     latest_poll_list = Poll.objects.all().order_by('-pub_date')[:5]
 #     context = {'latest_poll_list': latest_poll_list}
@@ -16,3 +18,6 @@ def results(request, poll_id):
 
 def vote(request, poll_id):
     return HttpResponse("You're voting on poll %s." % poll_id)
+
+# def profile(request, user.id):
+# 	return HttpResponse("Hello %s" % user.id)

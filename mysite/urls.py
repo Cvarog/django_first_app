@@ -1,7 +1,8 @@
 from django.conf.urls import patterns, include, url
-
-# Uncomment the next two lines to enable the admin:
+# from polls import views
 from django.contrib import admin
+# from django.contrib.auth import User
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -16,5 +17,5 @@ urlpatterns = patterns('',
 
     (r'^accounts/', include('registration.backends.default.urls')),
     url(r'^polls/', include('polls.urls', namespace="polls")),
-    url(r'^admin/', include(admin.site.urls)),
-)
+    url(r'^admin/', include(admin.site.urls)),)
+    # url(r'^accounts/profile/(?P<user_id>\d+)', views.profile, name = 'profile'),)

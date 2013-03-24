@@ -144,7 +144,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'Alvyre@gmail.com'
 EMAIL_HOST_PASSWORD = 'I3s2v1i6r5anna'
 
-
+AUTH_PROFILE_MODULE = 'registration.RegistrationProfile'
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
